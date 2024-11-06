@@ -7,3 +7,11 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     });
   });
 });
+window.addEventListener("load", () => {
+  const typewriterElement = document.querySelector(".typewriter");
+
+  // Reset the animation by temporarily removing and reapplying the class
+  typewriterElement.style.animation = "none"; // Stop the animation temporarily
+  typewriterElement.offsetHeight; // Trigger a reflow to reset the animation
+  typewriterElement.style.animation = ""; // Reapply the animation
+});
